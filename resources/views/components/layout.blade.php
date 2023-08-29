@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laragigs</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
     <nav class="p-12 flex justify-between bg-orange-300">
         <a href="/" class="font-bold text-4xl text-white">LaraGigs</a>
-        <p class="font-semibold text-orange-700">Hello Job Seeker!</p>
+        <p class="font-semibold text-orange-700">
+            <a href="/login">Register</a> | <a href="/login">Login</a>
+        </p>
     </nav>
     {{-- Views --}}
-    @yield('content')
+    {{ $slot }}
 
 </body>
 
